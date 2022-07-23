@@ -1,7 +1,92 @@
+:root {
+  --black-0: #000000;
+  --black-1: #333;
+  --black-2: #101D1D;
+  --black-3: #070D0D;
+  --black-4: #0C0B0B;
+  --black-opacity-0: #1F252580;
+  --gray-0: #D7D7D7;
+  --gray-1: #E3E3E3;
+  --gray-2: #c2c1c1;
+  --gray-3: #e4e3e3;
+  --orange-0: #FF760C;
+  --red-0: #DD0E0E;
+  --red-1: #250303;
+  --red-2: #3A1C1C;
+  --red-3: #921515;
+  --red-4: #B43D3D;
+  --red-opacity-0: #DD0E0E8A;
+  --red-opacity-1: #FF525280;
+  --white-0: #FFFFFF;
+  --white-opacity-0: #FFFFFF47;
+  --white-opacity-1: #FFFFFF1A;
+  --yellow-opacity-0: #F6BC1BB3;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: var(--black-1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+header .band a {
+  color: var(--red-3);
+  font-size: 30px;
+  font-weight: bold;
+}
+header .navbar {
+  display: flex;
+}
+header .navbar a {
+  color: var(--white-0);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0px 20px;
+  line-height: 80px;
+}
+header .navbar a:hover {
+  background-color: var(--red-0);
+}
+header .menu-icon {
+  font-size: 50px;
+  cursor: pointer;
+  color: var(--white-0);
+  display: none;
+}
+
+@media (max-width: 640px) {
+  header .navbar {
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--black-0);
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms ease-out;
+  }
+  header .navbar .active {
+    left: 0;
+  }
+  header .menu-icon {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

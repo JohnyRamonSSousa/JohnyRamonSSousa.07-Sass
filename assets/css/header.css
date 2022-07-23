@@ -1,0 +1,35 @@
+header {
+  width: 100%;
+  height: 80px;
+  background-color: var(--black-1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+header .band a {
+  color: var(--red-3);
+  font-size: 30px;
+  font-weight: bold;
+}
+header .navbar {
+  display: flex;
+}
+header .navbar a {
+  color: var(--white-0);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0px 20px;
+  line-height: 80px;
+}
+header .navbar a:hover {
+  background-color: var(--red-0);
+}
+header .menu-icon {
+  font-size: 50px;
+  cursor: pointer;
+  color: var(--white-0);
+  display: none;
+}
+
+/*# sourceMappingURL=header.css.map */
